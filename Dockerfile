@@ -13,7 +13,7 @@ RUN git clone https://github.com/merbanan/rtl_433.git   && cd rtl_433/   && mkdi
 FROM debian:trixie
 
 # Install rtl_433 deps
-RUN apt-get update && apt-get install -y libc6 librtlsdr0 libsoapysdr0.7 libusb-1.0-0
+RUN apt-get update && apt-get install -y libc6 librtlsdr0 libsoapysdr0.8 libusb-1.0-0
 
 COPY --from=build /usr/local/bin/rtl_433 /usr/local/bin/rtl_433
 
