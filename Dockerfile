@@ -3,7 +3,7 @@ FROM debian:trixie
 ENV MQTT_HOST=localhost MQTT_PORT=1883 MQTT_USER= MQTT_PASS= BASE_TOPIC=RTL_433 USE_CHANNEL=no LISTEN_FREQUENCY=433M
 
 RUN apt-get update \
-    && apt-get install -y --no-recommends rtl-433 \
+    && apt-get install -y rtl-433 \
     # clean up
     && apt-get autoremove -y \
     && apt-get clean \
